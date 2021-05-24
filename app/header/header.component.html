@@ -1,0 +1,17 @@
+<nav class="navbar navbar-dark navbar-expand-lg sticky-top px-5" id="navigation-container">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand">USC Films</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link float-right" routerLink="/" >Home</a></li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" data-toggle="collapse" data-target=".navbar-collapse.show"><a class="nav-link float-right" routerLink="/mylist" >My List</a></li>
+      </ul>
+      <div class="nav-item navbar-right input-group-append">
+        <app-search></app-search>
+      </div>
+    </div>
+</nav>

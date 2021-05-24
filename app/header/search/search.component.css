@@ -1,0 +1,15 @@
+ng-template{
+  width: 100%;
+}
+ngb-highlight, input{
+  background-color: inherit !important;
+  color:white;
+}
+
+input{
+  border-radius: 0 !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  outline: none !important;
+}

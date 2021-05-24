@@ -1,0 +1,46 @@
+img{
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.card{
+  color: black;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.badge, .badge-pill, .badge-dark{
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.author-deet{
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  font-weight:300;
+  color: gray;
+}
+
+.overview{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.read_more{
+  text-decoration: underline;
+}
+
+.pill{
+  vertical-align: center;
+  text-align: center;
+  align-items: center;
+  background-color: black;
+  padding: 0.4rem 0.74rem 0.4rem 0.74rem;
+  border-radius: 3rem;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: lighter;
+}

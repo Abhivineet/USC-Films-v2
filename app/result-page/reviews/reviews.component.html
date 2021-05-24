@@ -1,0 +1,5 @@
+<div class="row" *ngIf="data">
+  <div class="col-12" *ngFor="let review of data">
+    <app-review-card [data]="review"></app-review-card>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="row card flex-row py-3 mx-0" *ngIf="data">
+  <div class="col-2 offset-1 offset-lg-0">
+    <div class="card-img d-flex justify-content-center">
+      <img [src]="data['avatar_path']" alt="Image not found">
+    </div>
+  </div>
+  <div class="col-lg-10 col-12">
+    <div class="row" *ngIf="!this.isHandset">
+      <div class="col-12">
+        <h5 style="font-weight: 600;">A review created by {{data.author}} <sup><span class="pill"><span style="font-size: 1rem !important;">&#9733;</span> {{data.rating}}</span></sup></h5>
+      </div>
+    </div>
+    <div class="row" *ngIf="this.isHandset">
+      <div class="col-12">
+        <h5 style="font-weight: 600;">A review created by {{data.author}} </h5>
+      </div>
+      <div class="col-12">
+        <span class="pill"><span style="font-size: 1rem !important;">&#9733;</span> {{data.rating}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p class="author-deet small">Written by {{ data.author }} on {{ data.created_at }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p class="overview small">
+          {{ data.content }}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <a [href]="data.url" class="read_more small" target="_blank">Read the rest</a>
+      </div>
+    </div>
+  </div>
+</div>

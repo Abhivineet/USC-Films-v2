@@ -1,0 +1,47 @@
+<div class="modal-container modal-lg p-2" *ngIf="personDetails">
+  <div class="modal-header">
+    <h5 class="modal-title">{{personDetails.name}}</h5>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-12 col-lg-3 img-holder">
+        <img [src]="imgLink" class="cast-image img-fluid">
+      </div>
+      <div class="col-12 col-lg-9 px-lg-4">
+        <div class="row" *ngIf="personDetails.birthday">
+          Birth: {{personDetails.birthday}}
+        </div>
+        <div class="row" *ngIf="personDetails.birthplace">
+          Birth Place: {{personDetails.birthplace}}
+        </div>
+        <div class="row">
+          Gender: {{personDetails.gender}}
+        </div>
+        <div class="row" *ngIf="personDetails.homepage">
+          Website:&nbsp;<a [href]="personDetails.homepage" target="_blank" style="text-decoration: underline !important;">{{personDetails.homepage}}</a>
+        </div>
+        <div class="row" *ngIf="personDetails.known_for">
+          Known For: {{personDetails.known_for}}
+        </div>
+        <div class="row" *ngIf="personDetails.aka">
+          Also Known as: {{personDetails.aka}}
+        </div>
+        <div class="row pt-2">
+          <a *ngIf="imdbLink" class="social imdb pr-1" [href]="imdbLink" target="_blank" ngbPopover="Visit IMDb" popoverClass="my-custom-class" triggers="mouseenter:mouseleave"><fa-icon [icon]="imdbIcon"></fa-icon></a>
+          <a *ngIf="instaLink" [href]="instaLink" class="social insta px-1" target="_blank" ngbPopover="Visit Instagram" popoverClass="my-custom-class" triggers="mouseenter:mouseleave"><fa-icon [icon]="instaIcon"></fa-icon></a>
+          <a *ngIf="facebookLink" [href]="facebookLink" class="social facebook px-1" target="_blank" ngbPopover="Visit Facebook" popoverClass="my-custom-class" triggers="mouseenter:mouseleave"><fa-icon [icon]="facebookIcon"></fa-icon></a>
+          <a *ngIf="twitterLink" class="social twitter px-1" [href]="twitterLink" target="_blank" ngbPopover="Visit Twitter" popoverClass="my-custom-class" triggers="mouseenter:mouseleave"><fa-icon [icon]="twitterIcon"></fa-icon></a>
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="personDetails.biography">
+      <h4 class="bio pt-2">Biography</h4>
+    </div>
+    <div class="row">
+      <p>{{personDetails.biography}}</p>
+    </div>
+  </div>
+</div>

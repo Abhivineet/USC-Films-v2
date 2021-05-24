@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.3rem;
+  border: gray;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(182,183,189,0.2)
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(182,183,189,255);
+  border-radius: 20px;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  background-color: rgb(6,12,53);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  outline: none !important;
+  min-height: 100%;
+  position: relative;
+}
+app-footer{
+  position: absolute;
+  bottom: 0;
+}
+
+ngb-typeahead-window.dropdown-menu{
+  background-color: rgb(3,11,36);
+}
+
+#home-slider .carousel-control-prev, #home-slider .carousel-control-next{
+  width: 5%;
+  position: absolute;
+  z-index: 2;
+}
+.carousel-control-prev{
+  justify-content: flex-start;
+}
+.carousel-control-next{
+  justify-content: flex-end;
+}
+#home-slider .carousel-control-prev{
+  left: -1rem;
+}
+#home-slider .carousel-control-next{
+  right: -1.5rem;
+}
+
+.slider-card{
+  height: 13rem;
+  width: 11rem;
+}
+
+ngb-carousel{
+  outline:none
+}
+
+iframe{
+  width: 100%;
+}

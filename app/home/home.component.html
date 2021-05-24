@@ -1,0 +1,19 @@
+<div class="container-fluid mt-3">
+  <div class="row justify-content-center pb-3 pt-0 mt-0">
+    <div id="cpm" class="col-10">
+      <app-currently-playing></app-currently-playing>
+    </div>
+  </div>
+  <div class="row m-auto justify-content-center" *ngIf="this.continueWatchingEmpty">
+    <div class="col-12">
+      <h3>Continue Watching</h3>
+      <app-slider [showPageIndicators]="this.condition" [showArrows]="this.condition" [deckData]="continueWatchingData"></app-slider>
+    </div>
+  </div>
+  <div class="row m-auto justify-content-center" *ngIf="this.fetchedHomeData">
+    <div class="col-12" *ngFor="let category of categories">
+      <h3>{{ category }}</h3>
+      <app-slider [showPageIndicators]="true" [showArrows]="true" [deckData]="data[category]"></app-slider>
+    </div>
+  </div>
+</div>

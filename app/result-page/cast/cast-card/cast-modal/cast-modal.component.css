@@ -1,0 +1,39 @@
+.modal-header{
+  color: black;
+}
+.img-holder{
+  padding-left: 0;
+}
+.modal-container{
+  max-height: 100vh;
+  overflow-y: scroll !important;
+}
+
+.modal-body{
+  color: gray;
+  font-size: 0.75rem;
+  padding-left: 2rem;
+}
+
+fa-icon{
+  font-size: 1.5rem;
+  padding-right: 0.2rem;
+  outline: none;
+}
+a{
+  outline: none;
+  text-decoration: none;
+}
+
+.imdb, .imdb:hover{
+  color: #f5de50;
+}
+.twitter, .twitter:hover{
+  color: rgb(29,161,242);
+}
+.facebook, .facebook:hover{
+  color: #4267B2;
+}
+.insta, .insta:hover{
+  color: #C13584;
+}

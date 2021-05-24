@@ -1,0 +1,44 @@
+<div *ngIf="data">
+  <div class="row">
+    <div class="col-12 media-title">
+      {{ data.title }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 media-tag">
+      {{ data.tagline }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 media-misc">
+      <span *ngIf="data.year">
+        {{ data.year }}&nbsp;|&nbsp;
+      </span>
+      <span *ngIf="data.vote_average">
+        <span class="star">&#9733;&nbsp;&nbsp;</span>{{ data.vote_average }} |
+      </span>
+      <span *ngIf="data.runtime">
+        {{ data.runtime }}
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 media-genlang">
+      <div><span class="genres">Genres: </span>{{ data.genres}}</div>
+      <div><span class="lang">Spoken Languages: </span>{{ data.spoken_languages }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-primary" (click)="toggleWatchListStatus()">{{ this.inWatchList ? 'Remove from Watchlist' : 'Add to Watchlist'}}</button>
+    </div>
+  </div>
+  <div class="row pt-1">
+    <div class="col-12">
+      <p>
+        <ngb-alert #successAlert class="alert-success mla" type="custom" [dismissible]="true" *ngIf="this.showSuccess">Added to Watchlist</ngb-alert>
+        <ngb-alert #dangerAlert class="alert-danger mla" type="custom" [dismissible]="true" *ngIf="this.showDanger">Removed from Watchlist</ngb-alert>
+      </p>
+    </div>
+  </div>
+</div>

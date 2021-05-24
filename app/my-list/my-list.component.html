@@ -1,0 +1,17 @@
+<div class="row text-center my-5" *ngIf="this.isEmpty">
+  <div class="col-12">
+    <h3>No items found in Watchlist.</h3>
+  </div>
+</div>
+<div class="row mt-3" *ngIf="!this.isEmpty">
+  <div class="col-12">
+    <h3>My Watchlist</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-11 ml-3">
+    <div *ngFor="let deck of myListDecks; let i = index">
+      <app-card-deck class="p-0 m-0" [cardData]="deck" [slideNumber]="i"></app-card-deck>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="search-comp">
+  <ng-template #rt let-r="result" let-t="term">
+    <div class="opener nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" (click)="navigateToResult(r.media, r.id)">
+          <img [src]="r.backdropPath" style="width: 3rem" alt="Image not available">
+          <ngb-highlight [result]="r.title" [term]="t" class="px-1"></ngb-highlight>
+    </div>
+  </ng-template>
+  <fieldset class="form-inline">
+    <input [(ngModel)]="model"  [ngbTypeahead]="search" [resultTemplate]="rt" [class.is-invalid]="searchFailed"
+           class="form-control mx-sm-3" id="typeahead-http" placeholder="Search" type="text" [inputFormatter]="formatter"/>
+  </fieldset>
+</div>

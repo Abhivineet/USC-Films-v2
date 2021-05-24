@@ -1,0 +1,18 @@
+<div class="card card-block mx-2" (click)="openCastModal()" *ngIf="showCard">
+  <img [src]="data['profile_path']">
+  <div class="row">
+    <div class="col-10 offset-1 font-weight-bold">
+      {{data.name}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10 offset-1 font-weight-bold">
+      AS
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10 offset-1">
+      {{data.character}}
+    </div>
+  </div>
+</div>

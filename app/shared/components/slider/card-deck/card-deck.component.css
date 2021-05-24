@@ -1,0 +1,5 @@
+#home-card-deck{
+  justify-content: space-around;
+  flex-direction: column;
+  min-width: 100%;
+}

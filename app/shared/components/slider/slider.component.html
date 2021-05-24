@@ -1,0 +1,9 @@
+<ngb-carousel id="home-slider" #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)" [showNavigationIndicators]="this.showPageIndicators && !this.isHandset" [showNavigationArrows]="this.showArrows || this.isHandset">
+  <ng-template ngbSlide *ngFor="let deck of deckData; let i=index">
+    <div class="row justify-content-between m-0 px-2">
+      <div class="col-12 mx-1">
+        <app-card-deck [cardData]="deck" [slideNumber]="i"></app-card-deck>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>

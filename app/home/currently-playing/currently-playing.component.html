@@ -1,0 +1,15 @@
+<ngb-carousel *ngIf="fetchedCarousel" [animation]="true" [showNavigationIndicators]="!this.isHandset">
+  <ng-template ngbSlide *ngFor="let c of cpmcCarouselData">
+    <div class="h" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" (click)="navigateToDetails(c.id)">
+        <div class="img-wrapper">
+        <img class="bg-image img-fluid" [src]="c['backdropPath']" alt="Random first slide">
+        </div>
+      <div class="carousel-caption card-overlay" *ngIf="infoVisible || this.isHandset">
+
+      </div>
+      <div class="carousel-caption text-left card-info" *ngIf="infoVisible || this.isHandset">
+        {{c.title}}
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>

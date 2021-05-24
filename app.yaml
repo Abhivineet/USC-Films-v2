@@ -1,0 +1,8 @@
+runtime: nodejs14 
+handlers:
+  - url: /(.*\.(js|css|svg|png)(|\.map))$
+    static_files: dist/usc-films/\1
+    upload: dist/usc-films/(.*)(|\.map)
+  - url: /.*
+    static_files: dist/usc-films/index.html
+    upload: dist/usc-films/.*

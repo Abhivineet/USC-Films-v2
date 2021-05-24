@@ -1,0 +1,43 @@
+.media-title{
+  font-weight: 500;
+  font-size: 2rem;
+}
+.star{
+  font-size: 0.75em;
+}
+.media-tag{
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.media-misc{
+  padding-top: 0.75em;
+  font-weight: 200;
+  font-size: 1em;
+}
+.media-genlang{
+  padding-top: 0.5em;
+  font-weight: 200;
+  font-size: 0.8em;
+}
+.genres, .lang{
+  font-weight: 400;
+}
+
+.btn{
+  margin-top: 1.5em;
+  font-size: 0.75em;
+}
+:host >>> .alert-custom {
+  color: gray;
+  font-size: 0.75em !important;
+}
+.mla{
+  margin-top: 1.5em;
+}
+.alert{
+  /*!*display: flex;*!*/
+  /*align-items: baseline;*/
+  /*vertical-align: middle;*/
+}

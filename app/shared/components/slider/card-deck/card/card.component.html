@@ -1,0 +1,9 @@
+<div id="home-card-container" class="card p-0" *ngIf="card" (click)="navigateToDetails()" (mouseenter)="mouseEnterCard()" (mouseleave)="mouseLeaveCard()">
+  <img class="slider-card card-img-top img-fluid" [ngStyle]="{'height': this.isHandset ? '19rem' : '13rem'}" [src]="card['posterPath']" alt="Image unavailable">
+  <div class="carousel-caption card-overlay" *ngIf="this.showInfo">
+
+  </div>
+  <div class="carousel-caption card-info" *ngIf="this.showInfo">
+    {{card.title}}
+  </div>
+</div>
